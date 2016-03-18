@@ -1,0 +1,8 @@
+[resque_web]
+192.168.30.21
+
+[proxy]
+192.168.30.20
+
+[all:vars]
+stage=development

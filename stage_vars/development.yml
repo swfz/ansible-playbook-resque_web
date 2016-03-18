@@ -1,0 +1,10 @@
+app_user: vagrant
+git_user: "{{ app_user }}"
+rbenv_local: 2.2.2
+resque_web:
+  config:
+    host: resque_web.local
+    redis:
+      host: 192.168.30.11
+      port: 6379
+

@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+require 'resque/server'
+Resque.redis = Redis.new(:host => '192.168.30.11', :port => 6379)
+run Rack::URLMap.new '/' => Resque::Server.new

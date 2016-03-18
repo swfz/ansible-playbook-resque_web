@@ -1,0 +1,20 @@
+---
+- hosts: resque_web
+  sudo: yes
+  vars_files:
+    - stage_vars/{{ stage }}.yml
+  roles:
+    - git
+    - rbenv
+    - supervisor
+    - resque_web
+
+- hosts: proxy
+  sudo: yes
+  vars_files:
+    - stage_vars/{{ stage }}.yml
+
+  tasks:
+  - include: virtual.yml
+
+

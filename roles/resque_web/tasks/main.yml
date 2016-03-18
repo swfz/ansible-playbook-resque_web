@@ -1,0 +1,16 @@
+- name: install resque
+  shell: "{{ rbenv.bin }} exec gem install resque"
+  sudo_user: "{{ app_user }}"
+
+- name: set app file
+  template:
+    src: resque_web.ru.j2
+    dest: ~/resque_web.ru
+  sudo_user: "{{ app_user }}"
+
+- name: set supervisor config
+  template:
+    src: resque_web.ini.j2
+    dest: /etc/supervisor.d/resque_web.ini
+  notify: restart supervisord
+

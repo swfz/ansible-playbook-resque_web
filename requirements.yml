@@ -1,0 +1,8 @@
+- src: https://github.com/swfz/ansible-role-git.git
+  name: git
+
+- src: https://github.com/swfz/ansible-role-rbenv.git
+  name: rbenv
+
+- src: https://github.com/swfz/ansible-role-supervisor3.git
+  name: supervisor

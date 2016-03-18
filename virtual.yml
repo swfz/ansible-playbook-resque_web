@@ -1,0 +1,4 @@
+- name: set nginx virtual config
+  template:
+    src: nginx.virtual.conf
+    dest: "/etc/nginx/conf.d/resque_web.conf"
