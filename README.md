@@ -1,12 +1,12 @@
 # Resque web Playbook
 
-- install roles
+## install roles
 
 ```
 ansible-galaxy install -r requirements.yml -p roles
 ```
 
-- change config
+## change config
 
 please change configuration
 
@@ -22,7 +22,7 @@ resque_web:
         port: {port of redis}
 ```
 
-- install resque web
+## install resque web
 
 ```
 ansible-playbook -i hosts.{stagefile} site.yml
