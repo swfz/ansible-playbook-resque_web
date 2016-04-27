@@ -5,7 +5,7 @@ stopsignal = QUIT
 log_stdout = True
 user       = {{ app_user }}
 environment=PATH="PATH:/usr/local/bin:/usr/bin:/bin",HOME="/home/{{ app_user }}"
-command = {{ exec_rbenv }} exec rackup ~/resque_web.ru -o 0.0.0.0
+command = {{ rbenv.bin }} exec rackup ~/resque_web.ru -o 0.0.0.0
 autostart = True
 stderr_logfile = /var/log/supervisor/resque_web.err.log
 stdout_logfile = /var/log/supervisor/resque_web.stdout.log
